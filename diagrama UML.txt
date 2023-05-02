@@ -1,0 +1,61 @@
+
+
+Atributos da classe Gasto:
+
+    tipo (String)
+    data (String)
+    valor (double)
+    formaPagamento (String)
+
+Métodos da classe Gasto:
+
+    getters e setters para cada atributo
+    toString()
+
+Atributos da classe Ganho:
+
+    tipo (String)
+    data (String)
+    valor (double)
+
+Métodos da classe Ganho:
+
+    getters e setters para cada atributo
+    toString()
+
+Atributos da classe RelatorioMensal:
+
+    mes (int)
+    ano (int)
+    listaGastos (ArrayList<Gasto>)
+    listaGanhos (ArrayList<Ganho>)
+
+Métodos da classe RelatorioMensal:
+
+    getters e setters para cada atributo
+    adicionarGasto(Gasto gasto): adiciona um gasto à lista de gastos
+    adicionarGanho(Ganho ganho): adiciona um ganho à lista de ganhos
+    calcularGastoTotal(): retorna o valor total dos gastos
+    calcularGanhoTotal(): retorna o valor total dos ganhos
+    calcularSaldo(): retorna o saldo (ganho total - gasto total) do mês
+    toString()
+
+Diagrama UML:
+
++--------------+         +----------+         +----------------+
+|     Gasto    |         |  Ganho   |         | RelatorioMensal |
++--------------+         +----------+         +----------------+
+| - tipo       |         | - tipo   |         | - mes          |
+| - data       |         | - data   |         | - ano          |
+| - valor      |         | - valor  |         | - listaGastos  |
+| - formaPagto |         |          |         | - listaGanhos  |
++--------------+         +----------+         +----------------+
+| + getters    |         | + getters|         | + getters/setters |
+| + setters    |         | + setters|         | + adicionarGasto |
+| + toString() |         | + toString()|       | + adicionarGanho |
++--------------+         +----------+         | + calcularGastoTotal |
+                                              | + calcularGanhoTotal |
+                                              | + calcularSaldo |
+                                              | + toString()    |
+                                              +----------------+
+
